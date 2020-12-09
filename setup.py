@@ -6,11 +6,16 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 
 
+with (here / 'README.md').open('r', encoding='utf8') as f:
+    # Remove images
+    LONG_DESCRIPTION = '\n'.join(line for line in f if not line.startswith('!['))
+
+
 setup(
     name='django-walrus',
     version='0.0.1',
     description='Add assignment expressions (walrus operator) to Django templates',
-    long_description=(here / 'README.md').read_text(encoding='utf-8'),
+    long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     url='https://github.com/bmispelon/django-walrus',
     author='Baptiste Mispelon',
