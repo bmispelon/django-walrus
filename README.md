@@ -4,7 +4,7 @@
 
 ## Installation
 
-1) `pip install git+https://github.com/bmispelon/django-walrus.git#egg=django_walrus` (PyPI support in progress)
+1) `pip install django-walrus`
 2) Add `walrus` to your settings's `INSTALLED_APPS`
 3) That's it. Now you can go for a swim in ice-cold water, or maybe hunt a penguin.
 

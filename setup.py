@@ -13,7 +13,7 @@ with (here / 'README.md').open('r', encoding='utf8') as f:
 
 setup(
     name='django-walrus',
-    version='0.0.1',
+    version='0.0.3',
     description='Add assignment expressions (walrus operator) to Django templates',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
