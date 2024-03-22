@@ -1,0 +1,37 @@
+[project]
+name = "django-walrus"
+version = "0.1.0"
+authors = [
+  { name="Baptiste Mispelon", email="bmispelon@gmail.com" },
+]
+description = "Add assignment expressions (walrus operator) to Django templates"
+keywords = ["django", "walrus", "assignment expression"]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+]
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/bmispelon/django-walrus"
+Issues = "https://github.com/bmispelon/django-walrus/issues"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+skip-excluded-dirs = true
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/walrus"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/walrus"]
