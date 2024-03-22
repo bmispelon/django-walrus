@@ -42,10 +42,3 @@ class WalrusPatchConfig(AppConfig):
         smartif.OPERATORS[':='].id = ':='
         if os.getenv('WALRUS_OPTIMIZED'):
             _walrus_optimized()
-
-
-default_app_config = 'walrus.WalrusPatchConfig'
-
-
-if __name__ == '__main__':
-    _walrus_optimized()
